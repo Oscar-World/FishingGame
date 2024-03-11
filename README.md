@@ -8,7 +8,7 @@
 
 <br/><br/>
 
-![App Icon](https://github.com/Oscar-World/FishingGame/blob/main/app_icon.png)
+![App Icon](https://github.com/Oscar-World/FishingGame/blob/master/app_icon.png)
 
 <br/><br/>
 
