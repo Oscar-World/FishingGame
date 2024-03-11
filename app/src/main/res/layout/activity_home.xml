@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_values"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/back"
+                android:id="@+id/imageViewBack"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="30dp"
+                android:text="낚싯대 강화소"
+                android:id="@+id/textViewTitle"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/background_values"
+            >
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:gravity="right|center"
+                android:layout_gravity="center"
+                android:paddingHorizontal="10dp"
+                android:text="0"
+                android:textSize="15dp"
+                style="@style/boldStyle"
+                android:id="@+id/textViewRodCount"
+                android:layout_weight="3"
+                android:background="@drawable/background_value"
+                android:drawableStart="@drawable/rod_value"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:gravity="right|center"
+                android:layout_gravity="center"
+                android:paddingHorizontal="20dp"
+                android:text="0"
+                android:textSize="15dp"
+                style="@style/boldStyle"
+                android:id="@+id/textViewBagCount"
+                android:layout_weight="2"
+                android:background="@drawable/background_value"
+                android:drawableStart="@drawable/backpack"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:gravity="right|center"
+                android:layout_gravity="center"
+                android:paddingHorizontal="20dp"
+                android:text="0"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                style="@style/boldStyle"
+                android:id="@+id/textViewUserKKON"
+                android:background="@drawable/background_value"
+                android:drawableStart="@drawable/coin"/>
+
+        </LinearLayout>
+
+
+        <!-- 강화 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/linearLayoutUpgrade"
+            android:visibility="visible"
+            android:background="@drawable/background_upgrade"
+            android:gravity="top"
+            >
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="vertical"
+                android:background="@drawable/dialog_background_transperancy">
+
+
+                <!-- 현재 강화 수치 에서 다음 강화 수치 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+0 -> +1"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    style="@style/boldStyle"
+                    android:textSize="40sp"
+                    android:id="@+id/textViewUpgrade"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/black"
+                    android:layout_marginVertical="5dp"
+                    />
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="@drawable/dialog_background_normal"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/rod_wood"
+                    android:padding="10dp"
+                    android:id="@+id/imageViewRod"
+                    />
+
+
+                <!-- 강화 확률 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    >
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="3.2"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6.8"
+                        android:text="성공 확률 : 50%"
+                        style="@style/boldStyle"
+                        android:id="@+id/textViewSuccessProbability"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    >
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="3.2"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6.8"
+                        android:text="유지 확률 : 0%"
+                        style="@style/boldStyle"
+                        android:id="@+id/textViewKeepProbability"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    >
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="3.2"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6.8"
+                        android:text="하락 확률 : 0%"
+                        style="@style/boldStyle"
+                        android:id="@+id/textViewDownProbability"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                </LinearLayout>
+
+                <!-- 강화 비용 -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="강화비용 : 1000"
+                    style="@style/boldStyle"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:drawableEnd="@drawable/coin"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/textViewUpgradeKKON"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/black"/>
+
+                <!-- 강화 버튼 -->
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:id="@+id/buttonUpgrade"
+                    style="@style/boldStyle"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/dialog_background_normal"
+                    android:text="강화"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!-- 강화 레이아웃 끝-->
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutFishDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/background_paper"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/imageViewFishDetail"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/fish"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/textViewFishDetailFishName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="물고기"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/textViewFishDetailFishLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="20cm"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <View
+                android:id="@+id/viewFishDetailSpace"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/textViewFishDetailFishPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="100"
+                android:drawableEnd="@drawable/coin"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonFishDetailCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            style="@style/boldStyle"
+            android:background="@drawable/dialog_background_transperancy"
+            android:text="확 인"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewHammer"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/hammer"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewSuccess"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/success"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewFail"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/fail"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:visibility="gone"
+        />
+
+</FrameLayout>

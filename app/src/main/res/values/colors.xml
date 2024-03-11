@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transperancy">#00FFFFFF</color>
+    <color name="gray">#808080</color>
+    <color name="transBlack">#99000000</color>
+    <color name="magic">#8DE6F1</color>
+    <color name="rare">#724CB6</color>
+    <color name="unique">#E44F82</color>
+    <color name="legendary">#FFCE3C</color>
+    <color name="normal">#AAA8A8</color>
+    <color name="wood">#a37567</color>
+    <color name="wood_light">#efc095</color>
+    <color name="wood_gray">#A3988D</color>
+    <color name="red">#FF0000</color>
+    <color name="wood_bold">#C18E65</color>
+
+</resources>

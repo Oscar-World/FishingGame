@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutRankItem"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_weight="0.8">
+
+            <TextView
+                android:id="@+id/textViewRank"
+                style="@style/boldStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="1"
+                android:textSize="15sp"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginStart="10dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5">
+
+            <TextView
+                android:id="@+id/textViewNickname"
+                style="@style/boldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="nickname"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.2"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:padding="5dp"
+                android:id="@+id/imageViewTargetImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_launcher_background" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginEnd="10dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/textViewRankContent"
+                style="@style/boldStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:text="000000점" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

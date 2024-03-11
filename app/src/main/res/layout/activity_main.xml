@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbackground"
+    tools:context=".main.MainActivity">
+
+    <!--  메인 레이아웃  -->
+    <FrameLayout
+        android:id="@+id/frameLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="5dp"
+            >
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:orientation="horizontal"
+               >
+
+           <ImageView
+               android:id="@+id/imageViewInventory"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:src="@drawable/inventory_value"
+               android:layout_gravity="end"
+               android:layout_margin="5dp"
+               android:padding="5dp"
+               />
+
+           <ImageView
+               android:id="@+id/imageViewCollection"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:src="@drawable/collection"
+               android:layout_gravity="end"
+               android:layout_margin="5dp"
+               android:padding="5dp"
+               />
+
+               <View
+                   android:layout_width="0dp"
+                   android:layout_height="0dp"
+                   android:layout_weight="3"/>
+
+
+            <ImageView
+                android:id="@+id/imageViewFishing"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/fishingground"
+                android:layout_gravity="end"
+                />
+           </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewShop"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/market"
+                android:layout_gravity="start"
+                />
+
+            <ImageView
+                android:id="@+id/imageViewHome"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/upgradestation"
+                android:layout_gravity="end"
+                />
+
+            <ImageView
+                android:id="@+id/imageViewRanking"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/rankingstation"
+                android:layout_gravity="start"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!--  낚시 필드 레이아웃  -->
+    <FrameLayout
+        android:id="@+id/frameLayoutFishingField"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="5dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewSeaLockText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="낚싯대 +25강\n달성 시 오픈"
+                    android:textSize="20dp"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+
+                <ImageView
+                    android:id="@+id/imageViewSea"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/sea"
+                    />
+
+                <ImageView
+                    android:id="@+id/imageViewSeaLock"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/sealock"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/imageViewBeach"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/beach"
+                />
+
+            <ImageView
+                android:id="@+id/imageViewBeachLock"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/beachlock"
+                android:visibility="gone"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/textViewBeachLockText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="낚싯대 +20강\n달성 시 오픈"
+                android:textSize="20dp"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewRiverLockText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="낚싯대 +10강\n달성 시 오픈"
+                    android:textSize="20dp"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+
+                <ImageView
+                    android:id="@+id/imageViewRiver"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/river"
+                    />
+
+                <ImageView
+                    android:id="@+id/imageViewRiverLock"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/riverlock"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewLake"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/lake"
+                android:layout_gravity="start"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!--  닉네임 생성 레이아웃  -->
+    <FrameLayout
+        android:id="@+id/frameLayoutRegisterNickname"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transBlack"
+        android:clickable="true"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="30dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/background_paper"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="22dp"
+                android:textColor="@color/black"
+                android:text="닉네임 생성"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:text="사용하실 닉네임을 입력하세요."
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                />
+
+            <EditText
+                android:id="@+id/editTextNickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:layout_marginBottom="30dp"
+                />
+
+            <Button
+                android:id="@+id/buttonRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="생 성"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:background="@drawable/dialog_background_transperancy"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+    <!--  닉네임 생성 레이아웃 끝  -->
+
+    <!-- 인벤토리 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/linearLayoutInventory"
+        android:background="@color/wood_light"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_values"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/back"
+                android:id="@+id/imageViewInventoryBack"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="30dp"
+                android:text="인벤토리"
+                android:id="@+id/textViewTitle"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/background_values"
+            >
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:gravity="right|center"
+                android:layout_gravity="center"
+                android:paddingHorizontal="10dp"
+                android:text="0"
+                android:textSize="15dp"
+                style="@style/boldStyle"
+                android:id="@+id/textViewRodCount"
+                android:layout_weight="3"
+                android:background="@drawable/background_value"
+                android:drawableStart="@drawable/rod_value"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:gravity="right|center"
+                android:layout_gravity="center"
+                android:paddingHorizontal="20dp"
+                android:text="0"
+                android:textSize="15dp"
+                style="@style/boldStyle"
+                android:id="@+id/textViewBagCount"
+                android:layout_weight="2"
+                android:background="@drawable/background_value"
+                android:drawableStart="@drawable/backpack"/>
+
+            <TextView
+                android:id="@+id/textViewUserKKON"
+                style="@style/boldStyle"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/background_value"
+                android:drawableStart="@drawable/coin"
+                android:gravity="right|center"
+                android:paddingHorizontal="20dp"
+                android:text="0"
+                android:textSize="15dp"/>
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="4"
+            android:id="@+id/recyclerViewInventory"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/imageViewEmpty"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/empty"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+    <!-- 인벤토리 레이아웃 끝 -->
+
+
+    <!-- 도감 레이아웃-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/wood_light"
+        android:id="@+id/linearLayoutCollection"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_values"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/back"
+                android:id="@+id/imageViewCollectionBack"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="30dp"
+                android:text="도감"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            android:id="@+id/recyclerViewCollection"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/textViewNowCollectionCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/boldStyle"
+                android:text="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/boldStyle"
+                android:text="/"/>
+
+            <TextView
+                android:id="@+id/textViewMaxCollectionCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/boldStyle"
+                android:text="0"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 도감 레이아웃 끝-->
+
+    <!-- 물고기 상세보기 -->
+    <LinearLayout
+        android:id="@+id/linearLayoutFishDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/background_paper"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/imageViewFishDetail"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/fish"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/textViewFishDetailFishName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="물고기"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/textViewFishDetailFishLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="20cm"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <View
+                android:id="@+id/viewFishDetailSpace"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/textViewFishDetailFishPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="100"
+                android:drawableEnd="@drawable/coin"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonFishDetailCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            style="@style/boldStyle"
+            android:background="@drawable/dialog_background_transperancy"
+            android:text="확 인"/>
+
+    </LinearLayout>
+
+    <!-- 물고기 상세보기 끝 -->
+
+
+</FrameLayout>

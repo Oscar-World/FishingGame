@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:background="@drawable/background_paper"
+    android:layout_margin="5dp"
+    android:id="@+id/linearLayoutItem"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="낚싯대 이름"
+        android:id="@+id/textViewRodName"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        style="@style/boldStyle"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/rod_wood"
+        android:layout_gravity="center"
+        android:id="@+id/imageViewRod"
+        android:padding="10dp"
+        ></ImageView>
+
+</LinearLayout>
